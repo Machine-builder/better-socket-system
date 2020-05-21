@@ -1,3 +1,6 @@
+# The work of MACHINE_BUILDER
+# DO NOT CLAIM AS YOUR OWN
+
 import socket, sys
 from socket import error as sockerror
 import pickle
