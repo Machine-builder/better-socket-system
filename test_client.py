@@ -17,7 +17,7 @@ while 1:
         }
         CLIENT.hsend_o( m )
     
-    messages, connected = CLIENT.get_new_messages()
+    messages, connected = CLIENT.get_new_messages(True,True)
 
     if not connected:
         print("Connection closed by server!")
