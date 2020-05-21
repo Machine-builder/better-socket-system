@@ -1,5 +1,6 @@
-# The work of MACHINE_BUILDER
-# DO NOT CLAIM AS YOUR OWN
+# created by MACHINE_BUILDER
+# please do not steal and redistribute
+
 
 import socket, sys
 from socket import error as sockerror
@@ -202,14 +203,17 @@ class ServerClientSystemCLIENT(CLIENT):
                     print("No message")
                     connection_open = False
                     return (new_messages, connection_open)
-                
                 new_messages.append(
                     ServerClientSystemMessage( message )
                 )
         
+        except ConnectionResetError as e:
+            connection_open = False
+            return (new_messages, connection_open)
+
         except IOError as e:
-            if raise_reading_errors:
-                if e.errno != errno.EAGAIN and e.errno != errno.EWOULDBLOCK:
+            if e.errno != errno.EAGAIN and e.errno != errno.EWOULDBLOCK:
+                if raise_reading_errors:
                     raise f"Reading error {str(e)}"
         
         except Exception as e:
