@@ -12,4 +12,4 @@ but thanks to Sentdex on YouTube (https://www.youtube.com/watch?v=8A4dqoGL62E), 
 
 # other
 this is by no means perfect :P - just a personal project of mine. enjoy!
-(please don't steal the code though :P)
+(please don't steal the code though - you are free to use it, just not free to redistribute it)
